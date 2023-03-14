@@ -4,7 +4,7 @@ let remove = document.getElementById("remove-btn");
 
 save.onclick = () => {
   let fieldValue = document.getElementById("field-value");
-  fieldValue.innerHTML = input.value;
+  fieldValue.innerText = input.value;
   localStorage.setItem("field", input.value);
 };
 
