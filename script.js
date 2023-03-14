@@ -1,32 +1,18 @@
-let input = document.getElementById("field");
 let save = document.getElementById("save-btn");
+let input = document.getElementById("field");
 let remove = document.getElementById("remove-btn");
 
 save.onclick = () => {
-  localStorage.setItem("field", input.value);
   let fieldValue = document.getElementById("field-value");
   fieldValue.innerHTML = input.value;
+  localStorage.setItem("field", input.value);
 };
 
 remove.onclick = () => {
   localStorage.removeItem("field", input.value);
 };
 
-// //esercizio 2
 
-// let time = 100;
-
-// let timer = document.getElementById("timer");
-// let timerId = setInterval(countdown, 1000);
-// function countdown() {
-//   if (time == 0) {
-//     clearTimeout(timerId);
-//     window.location.reload();
-//   } else {
-//     timer.innerText = `${time} secondi`;
-//     time--;
-//   }
-// }
 
 // prova 2
 
