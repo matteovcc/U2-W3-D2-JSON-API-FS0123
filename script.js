@@ -5,7 +5,7 @@ let remove = document.getElementById("remove-btn");
 save.onclick = () => {
   localStorage.setItem("field", input.value);
   let fieldValue = document.getElementById("field-value");
-  fieldValue.innerText = input.value;
+  fieldValue.innerHTML = input.value;
 };
 
 remove.onclick = () => {
@@ -46,22 +46,19 @@ remove.onclick = () => {
 //   }, 1000);
 // };
 
-
 //prova 3
 
 let counterValue = parseInt(sessionStorage.getItem("counter")) || 0;
 
-
 let interval;
 
-
 const update = () => {
-  interval.innerText = counterValue + " secondi";
-}
+  interval.innerText = `${counterValue} secondi`;
+};
 
 window.onload = () => {
-  interval = document.getElementById("counter")
-  update()
+  interval = document.getElementById("counter");
+  update();
 
   const start = document.getElementById("start");
   start.onclick = () => {
@@ -69,10 +66,9 @@ window.onload = () => {
       counterValue += 1;
       counter.textContent = `${counterValue} secondi`;
       sessionStorage.setItem("counter", counterValue);
-    }, 1000); 
-}
-}
-
+    }, 1000);
+  };
+};
 
 // prova 4
 
@@ -93,9 +89,6 @@ window.onload = () => {
 //   update()
 //   sessionStorage.setItem("counterValue", counterValue)
 // }
-
-
-
 
 // Esempio Michele
 
